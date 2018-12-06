@@ -16,11 +16,11 @@ Keras to TF and Deploy via tfserving
  
  3.Create tensorflow/serving container to serve model
  
- ''' python
+```
  docker run -d --name tf-serving --mount type=bind,\
    source=/path/to/exported_model,\
    target=/model/road_seg \
    -e MODEL_NAME=road_seg tensorflow/serving  
- '''
+ ```
  4.Test service
  Notebook: test_client.ipynb
